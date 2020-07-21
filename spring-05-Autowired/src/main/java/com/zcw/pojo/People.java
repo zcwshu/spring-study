@@ -1,12 +1,22 @@
 package com.zcw.pojo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+import javax.annotation.Resource;
+
 /**
  * @Author: AndrewBar
  * @Date: Created in 20:35 2020/7/19
  */
 public class People {
+    //@Autowired//可以不用set方法
+    @Resource
     private Cat cat;
+    @Autowired//自动装配环境比较复杂,可以使用Qualifier(value = "***")去配置,指定一个唯一的bean对象注入
+    @Qualifier(value = "dog22")
     private Dog dog;
+
     private String name;
 
     public Cat getCat() {
