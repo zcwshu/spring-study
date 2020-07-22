@@ -91,3 +91,11 @@ public class User {
     <context:annotation-config/>
 ```
 
+##Mybatis整合方
+- 编写数据源配置
+- sqlSessionFactory
+- sqlSessionTemplate
+- 需要给接口加实现类***新增***
+- 将自己写的实现类,注入到Spring中
+- 测试使用即可
+
