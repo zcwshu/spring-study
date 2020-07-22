@@ -14,7 +14,7 @@ public class Client {
 
         //通过调用程序处理角色,来处理我们要调用的接口对象
         pih.setRent(host);
-        Rent proxy = (Rent) pih.getProxy();//调用getProxy自动生成
+        Rent proxy = (Rent) pih.getProxy();//调用getProxy自动生成,proxy就是动态生成的
         proxy.rent();
     }
 }
